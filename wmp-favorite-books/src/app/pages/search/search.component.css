@@ -1,0 +1,19 @@
+md-card-title, md-card-content {
+  text-align: center;
+}
+
+md-input-container {
+  padding: 0;
+}
+
+input {
+  width: 300px;
+  font-size: 1.4em;
+}
+
+.results-area {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
