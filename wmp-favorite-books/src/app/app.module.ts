@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MdSidenavModule,
@@ -9,6 +10,8 @@ import {
   MdButtonModule
 } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+
+import { BookService } from './services/book.service';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './pages/search/search.component';
@@ -37,9 +40,10 @@ const appRoutes: Routes = [
     MdCardModule,
     MdInputModule,
     MdButtonModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

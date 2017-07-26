@@ -4,19 +4,11 @@
   </md-card-title>
   <md-card-content>
     <md-input-container [color]="'accent'">
-      <input mdInput placeholder="Search for a book" />
+      <input mdInput #searchInput placeholder="Search for a book" (keyup)="searchForBook(searchInput.value)" />
     </md-input-container>
   </md-card-content>
 </md-card>
 
 <div class="results-area">
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
-  <book-card></book-card>
+  <book-card *ngFor="let foundBook of searchResults" [book]="foundBook"></book-card>
 </div>

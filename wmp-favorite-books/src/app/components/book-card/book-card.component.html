@@ -8,11 +8,10 @@
     <p [innerHtml]="book.description"></p>
   </md-card-content>
   <md-card-actions align="start">
-    <button md-raised-button color="warn" *ngIf="book.isFavorited">
+    <!-- <button md-raised-button color="warn" *ngIf="book.isFavorited">
         Remove Book from Collection
-    </button>
-
-    <button md-raised-button color="primary" *ngIf="!book.isFavorited">
+    </button> -->
+    <button md-raised-button color="primary">
         Add Book to Collection
     </button>
   </md-card-actions>
