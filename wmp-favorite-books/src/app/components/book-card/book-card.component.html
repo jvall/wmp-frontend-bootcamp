@@ -1,6 +1,6 @@
 <md-card *ngIf="book">
   <md-card-title-group>
-    <md-card-title>{{ book.title }}</md-card-title>
+    <md-card-title>{{ book.title | truncate:30 }}</md-card-title>
     <md-card-subtitle>By: {{book.author}}</md-card-subtitle>
     <img md-card-sm-image [src]="book.thumbnailUrl" />
   </md-card-title-group>

@@ -19,7 +19,7 @@ export class BookService {
           return {
             id: item.id,
             title: item.volumeInfo.title,
-            author: item.volumeInfo.authors[0],
+            author: (item.volumeInfo.authors) ? item.volumeInfo.authors[0] : 'No authors available',
             description: item.description || 'No description available',
             thumbnailUrl: (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : 'http://via.placeholder.com/100x100'
           };

@@ -16,6 +16,7 @@ import { BookService } from './services/book.service';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './pages/search/search.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 const appRoutes: Routes = [
   { path: 'search', component: SearchComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
-    BookCardComponent
+    BookCardComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
